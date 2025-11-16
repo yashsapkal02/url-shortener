@@ -1,0 +1,285 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f7fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* NAVBAR */
+header {
+  background: white;
+  padding: 18px 25px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+header small {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+header nav a {
+  margin-right: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+header nav a:hover {
+  color: #2563eb;
+}
+
+header button {
+  background: #ef4444;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+header button:hover {
+  background: #dc2626;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-top: 6px;
+  font-size: 15px;
+  background: #f9fafb;
+}
+
+input:focus {
+  border-color: #2563eb;
+  background: white;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+}
+
+/* BUTTON (GLOBAL) */
+button {
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #ef4444;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  width: 75px;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+/* TABLE HEADER */
+th {
+  background: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* PERFECT COLUMN WIDTHS */
+th:nth-child(1), td:nth-child(1) { width: 12%; }
+th:nth-child(2), td:nth-child(2) { width: 32%; }
+th:nth-child(3), td:nth-child(3) { width: 18%; }
+th:nth-child(4), td:nth-child(4) { width: 18%; }
+th:nth-child(5), td:nth-child(5) { width: 7%; text-align:center; }
+th:nth-child(6), td:nth-child(6) { width: 10%; text-align:center; }
+
+tr:hover {
+  background: #f3f4f6;
+}
+
+/* FORM ROW */
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* LINKS */
+a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* AUTH PAGES */
+.center-box {
+  max-width: 450px;
+  margin: 50px auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+/* ALERTS */
+.alert {
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.alert-success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* PROFILE DROPDOWN */
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef2ff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #dbeafe;
+}
+
+.profile-btn:hover {
+  background: #e0e7ff;
+}
+
+.avatar {
+  background: #2563eb;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  width: 180px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  z-index: 20;
+}
+
+.dropdown-menu p.email {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 10px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-menu button:hover {
+  background: #dc2626;
+}
