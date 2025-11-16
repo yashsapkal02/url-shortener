@@ -1,155 +1,161 @@
-🚀 URL Shortener
+A full-stack URL Shortening application built using **Next.js**, **MongoDB Atlas**, **JWT Authentication**, and **Mongoose**.  
+Users can sign up, log in, create short URLs (with custom alias support), manage their own links, and track click counts.  
+Each user sees only their own URLs, ensuring secure multi-user separation.
 
-A full-stack URL Shortening application built using Next.js, MongoDB Atlas, JWT Authentication, and Mongoose.
+---
 
-Users can sign up, sign in, create custom short URLs, view/edit/delete their own links, and track click counts.
-Each user only sees their own shortened URLs.
-The app includes clean UI styling and secure backend API routes.
+## 📌 Project Title & Short Description
+**URL Shortener**  
+A cloud-based application that converts long URLs into short, easy-to-share links.  
+It includes authentication, dashboards, persistent storage, and modern UI styling.
 
-📌 Tech Stack
-Layer	Technology
-Frontend	Next.js (React)
-Backend	Next.js API Routes (Node.js)
-Database	MongoDB Atlas (Cloud Database)
-ORM	Mongoose
-Auth	JWT (JSON Web Tokens)
-Styling	Custom Global CSS
-✨ Features
-🔐 Authentication
+---
 
-User Signup (name, email, password)
+##  Tech Stack Used & Reason for Choice
 
-User Login
+### **Frontend**
+- **Next.js (React Framework)**  
+  ✔ Server-Side Rendering  
+  ✔ Built-in API routes  
+  ✔ Perfect for full-stack apps  
+  ✔ Easy deployment on Vercel  
 
-Passwords stored securely (hashed)
+### **Backend**
+- **Next.js API Routes (Node.js)**  
+  ✔ No need for separate backend  
+  ✔ Fast, integrated routing  
+  ✔ Better performance and simplicity  
 
-JWT-based session protection
+### **Database**
+- **MongoDB Atlas**  
+  ✔ Cloud-hosted  
+  ✔ Scalable  
+  ✔ Easy integration with Mongoose  
 
-Protected routes (Dashboard only accessible after login)
+### **Authentication**
+- **JWT (JSON Web Token)**  
+  ✔ Stateless auth  
+  ✔ Secure token-based login  
 
-🔗 URL Shortening
+### **ORM**
+- **Mongoose**  
+  ✔ Schema-based  
+  ✔ Handles MongoDB operations smoothly  
 
-Create short URLs from any long URL
+---
 
-Optional custom alias (/youtube, /yt, /g, etc.)
+## 🛠 How to Run Locally (Step-By-Step)
 
-Optional label for organization
-
-Auto-generate unique short codes
-
-Redirect handler on domain.com/[shortCode]
-
-Click counter increments on each visit
-
-📊 User Dashboard
-
-Create new short URLs
-
-View list of your URLs with:
-
-Label
-
-Long URL
-
-Short URL
-
-Created date
-
-Click count
-
-Delete any URL you created
-
-Users only see their own URLs (Account-isolated)
-
-📁 Project Structure (meets assignment expectations)
-/url-shortener
- ├── pages
- │    ├── api
- │    │    ├── auth
- │    │    │    ├── login.js
- │    │    │    └── signup.js
- │    │    └── url
- │    │         ├── create.js
- │    │         ├── list.js
- │    │         └── delete.js
- │    ├── dashboard.js
- │    ├── login.js
- │    ├── signup.js
- │    └── index.js
- ├── models
- │    ├── User.js
- │    └── Url.js
- ├── lib
- │    ├── mongodb.js
- │    └── auth.js
- ├── public
- ├── styles
- │    └── globals.css
- ├── .env.local
- └── README.md
-
-
-This structure aligns with:
-
-📌 “Frontend + API + DB + README in one repo”
-📌 “Clear file separation and modular backend routes”
-
-⚙️ Local Setup Instructions
-1️⃣ Clone the repository
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/<your-username>/url-shortener.git
 cd url-shortener
+```
 
-2️⃣ Install dependencies
+### 2️⃣ Install dependencies
+```bash
 npm install
+```
 
-3️⃣ Add environment file
+### 3️⃣ Create `.env.local` file
+Include:
 
-Create .env.local in the project root:
+```env
+MONGODB_URI="your_mongodb_connection_string"
+JWT_SECRET="your_secret_key"
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+```
 
-MONGODB_URI=your_mongo_atlas_uri
-JWT_SECRET=your_secret_key
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
-4️⃣ Start development server
+### 4️⃣ Start development server
+```bash
 npm run dev
+```
 
-
-The app runs at:
+Open app in browser:
 👉 http://localhost:3000
 
-🔀 Redirect Route
+---
 
-When a user visits:
+## 🧪 How to Run Tests (if any)
 
-/abc123
+This project does not include automated test scripts.  
+Manual testing can be done through:
+
+- Browser
+- Postman / Thunder Client
+- API route testing using CURL
+
+---
+
+## 📸 Screenshots (Recommended)
+
+You may upload:
+
+- Signup Page
+- <img width="1364" height="652" alt="signup" src="https://github.com/user-attachments/assets/b6ed563e-d14c-449d-aaa8-18fee8fc1a65" />
+
+- Login Page
+- <img width="1366" height="647" alt="login" src="https://github.com/user-attachments/assets/e55e7b5e-75e7-4a7e-bdd9-4ca88542c27f" />
+
+- Dashboard
+- <img width="1366" height="653" alt="dashboard" src="https://github.com/user-attachments/assets/14d42be5-e35c-4772-a8e0-45c7bad2bb7f" />
+
+- URL List Table
+- <img width="1366" height="652" alt="list" src="https://github.com/user-attachments/assets/dcb03358-1c66-4cd2-940c-e8b7e03ab561" />
+
+- MongoDB Atlas Data View
+- 
+<img width="1366" height="648" alt="mongodb1" src="https://github.com/user-attachments/assets/3fe3a1b8-84fd-4728-b84e-cddb0b7fe0a6" />
+<img width="1366" height="651" alt="mongodb2" src="https://github.com/user-attachments/assets/b572d086-f999-4096-a624-c125125c4f3d" />
 
 
-It will:
+---
 
-✔ Look up the shortCode
-✔ Increase the click counter
-✔ Redirect to the long URL
+## 📂 Project Structure
 
-🗄 Database (MongoDB Collections)
-users
+```
+url-shortener/
+│── pages/
+│   ├── index.js
+│   ├── login.js
+│   ├── signup.js
+│   ├── dashboard.js
+│   └── api/
+│       ├── auth/
+│       │   ├── signup.js
+│       │   └── login.js
+│       └── url/
+│           ├── create.js
+│           ├── delete.js
+│           └── list.js
+│
+│── models/
+│   ├── User.js
+│   └── Url.js
+│
+│── lib/
+│   ├── auth.js
+│   ├── mongodb.js
+│   └── generateCode.js
+│
+│── styles/
+│   └── globals.css
+│
+└── README.md
+```
+---
 
-Contains registered users
+## 👨‍💻 Author
 
-name, email, passwordHash, timestamps
+**Yash Sapkal**  
+GitHub: https://github.com/yashsapkal02  
 
-urls
+---
 
-Stores user-specific URLs
+If you want, I can also create:  
+✔ GitHub project description  
+✔ Repository topics/tags  
+✔ Commit message format  
+✔ A professional GitHub profile README  
 
-userId, shortCode, longUrl, label, clicks, timestamps
-
-
-User → URL relationship is strictly maintained.
-
-🧠 Design Rationale (1 sentence)
-
-The app is designed with clean separation of concerns—API routes handle business logic, MongoDB stores persistent data, and the UI provides a simple, secure interface for managing personal short links.
-
-📬 Submission
-
-Provide your GitHub repo link in the assignment email.
+Just tell me!
